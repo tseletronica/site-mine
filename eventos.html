@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -11,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./_css/styles.css" />
 </head>
+
 <body>
   <header class="header" id="topo">
     <div class="container header__inner">
@@ -24,10 +26,12 @@
         <a class="nav__link" href="./nacoes.html">Nações</a>
         <a class="nav__link" href="./classes.html">Classes</a>
         <a class="nav__link" href="./eventos.html">Eventos</a>
+        <a class="nav__link" href="./comandos.html">Comandos</a>
         <a class="nav__link" href="./como-entrar.html">Como entrar</a>
       </nav>
 
-      <button class="menuBtn" type="button" id="menuBtn" aria-label="Abrir menu" aria-haspopup="dialog" aria-controls="drawer" aria-expanded="false">☰</button>
+      <button class="menuBtn" type="button" id="menuBtn" aria-label="Abrir menu" aria-haspopup="dialog"
+        aria-controls="drawer" aria-expanded="false">☰</button>
 
       <div class="header__cta">
         <a class="btn btn--ghost" href="./como-entrar.html">IP e Porta</a>
@@ -48,6 +52,7 @@
         <a class="drawer__link" href="./nacoes.html">Nações</a>
         <a class="drawer__link" href="./classes.html">Classes</a>
         <a class="drawer__link" href="./eventos.html">Eventos</a>
+        <a class="drawer__link" href="./comandos.html">Comandos</a>
         <a class="drawer__link" href="./como-entrar.html">Como entrar</a>
       </nav>
       <div class="drawer__cta">
@@ -67,27 +72,38 @@
 
         <div class="grid3">
           <article class="event">
-            <img class="event__img" src="./_img/evento_tomada.png" alt="Imagem do evento Tomada do Castelo" loading="lazy" />
+            <img class="event__img" src="./_img/evento_tomada.png" alt="Imagem do evento Tomada do Castelo"
+              loading="lazy" />
             <h3>Tomada do Castelo</h3>
             <p><strong>Quando:</strong> sábados, das 18h às 19h.</p>
             <p><strong>Quem participa:</strong> somente <strong>Guerreiros</strong> e <strong>Lords</strong>.</p>
-            <p><strong>Como vence:</strong> o <strong>Rei</strong> que estiver <strong>dentro do castelo</strong> ao final da guerra se torna o <strong>dono do castelo</strong> e <strong>Rei do servidor</strong>.</p>
-            <p><strong>Recompensa:</strong> acesso ao <strong>Cofre do Reino</strong> e a nação do rei vira a <strong>Nação Dominante</strong> até a próxima tomada. O tesouro do reino é em <strong>Dracos</strong>.</p>
+            <p><strong>Como vence:</strong> o <strong>Rei</strong> que estiver <strong>dentro do castelo</strong> ao
+              final da guerra se torna o <strong>dono do castelo</strong> e <strong>Rei do servidor</strong>.</p>
+            <p><strong>Recompensa:</strong> acesso ao <strong>Cofre do Reino</strong> e a nação do rei vira a
+              <strong>Nação Dominante</strong> até a próxima tomada. O tesouro do reino é em <strong>Dracos</strong>.
+            </p>
           </article>
           <article class="event">
-            <img class="event__img" src="./_img/evento_gladiadores.png" alt="Imagem do evento Arena dos Gladiadores" loading="lazy" />
+            <img class="event__img" src="./_img/evento_gladiadores.png" alt="Imagem do evento Arena dos Gladiadores"
+              loading="lazy" />
             <h3>Arena dos Gladiadores</h3>
             <p><strong>Formato:</strong> <strong>4 jogadores</strong> dentro da arena ao mesmo tempo.</p>
-            <p><strong>Quem participa:</strong> classe <strong>Guerreiro</strong> (cada nação indica <strong>1 campeão</strong>).</p>
-            <p><strong>Como vence:</strong> o último jogador que <strong>sobreviver</strong> na arena leva a vitória.</p>
-            <p><strong>Recompensa:</strong> prêmio em <strong>Dracos</strong> pago pelo <strong>Reino</strong>. O valor depende do <strong>Cofre Real</strong>. <strong>30%</strong> do prêmio vai para o <strong>cofre da nação</strong> do campeão.</p>
+            <p><strong>Quem participa:</strong> classe <strong>Guerreiro</strong> (cada nação indica <strong>1
+                campeão</strong>).</p>
+            <p><strong>Como vence:</strong> o último jogador que <strong>sobreviver</strong> na arena leva a vitória.
+            </p>
+            <p><strong>Recompensa:</strong> prêmio em <strong>Dracos</strong> pago pelo <strong>Reino</strong>. O valor
+              depende do <strong>Cofre Real</strong>. <strong>30%</strong> do prêmio vai para o <strong>cofre da
+                nação</strong> do campeão.</p>
           </article>
           <article class="event">
             <img class="event__img" src="./_img/evento_cacada.png" alt="Imagem do evento Caçada Real" loading="lazy" />
             <h3>Caçada Real</h3>
             <p><strong>Como funciona:</strong> o Reino declara um jogador como <strong>fugitivo</strong>.</p>
-            <p><strong>Duração:</strong> sem tempo determinado. O fugitivo só recebe perdão quando o <strong>Rei é destronado</strong>.</p>
-            <p><strong>Recompensa:</strong> ao abater o fugitivo, a <strong>primeira kill do dia</strong> (por jogador) recebe um valor em <strong>Dracos</strong>.</p>
+            <p><strong>Duração:</strong> sem tempo determinado. O fugitivo só recebe perdão quando o <strong>Rei é
+                destronado</strong>.</p>
+            <p><strong>Recompensa:</strong> ao abater o fugitivo, a <strong>primeira kill do dia</strong> (por jogador)
+              recebe um valor em <strong>Dracos</strong>.</p>
           </article>
         </div>
 
@@ -137,4 +153,5 @@
     document.getElementById('year').textContent = String(new Date().getFullYear());
   </script>
 </body>
+
 </html>
