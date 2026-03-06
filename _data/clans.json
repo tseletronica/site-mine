@@ -1,0 +1,87 @@
+{
+  "clans": [
+    {
+      "id": "blue",
+      "name": "Água",
+      "color": "#3498db",
+      "colorCode": "§9",
+      "description": "Controle do mar, mobilidade e sobrevivência aquática.",
+      "nativeAbility": "Respiração Aquática + Conduit Power + Imunidade a Afogamento",
+      "abilities": [
+        "Respiração na água (permanente)",
+        "Visão clara embaixo d'água",
+        "Imunidade a afogamento",
+        "Guerreiro: Velocidade II + Onda de Choque na água",
+        "Construtor: Haste III na água + Coleta Direta",
+        "Lord: Aura de Resistência II + Regeneração II para aliados"
+      ],
+      "members": [],
+      "totalMembers": 0,
+      "leader": "Nenhum",
+      "founded": "2026-01-15"
+    },
+    {
+      "id": "red",
+      "name": "Fogo",
+      "color": "#e74c3c",
+      "colorCode": "§c",
+      "description": "Força bruta e resistência. Domine o Nether.",
+      "nativeAbility": "Imunidade ao Fogo + Lava",
+      "abilities": [
+        "Imunidade ao fogo (permanente)",
+        "Guerreiro: Força I passiva + Lâmina de Labareda (incendeia inimigos)",
+        "Guerreiro: Fúria de Magma (dano extra por vida perdida)",
+        "Construtor: Haste II permanente + Auto-Smelt de minérios",
+        "Construtor: Fornalha Viva (minérios fundidos automaticamente)",
+        "Lord: Aura de Resistência II + Força II para aliados"
+      ],
+      "members": [],
+      "totalMembers": 0,
+      "leader": "Nenhum",
+      "founded": "2026-01-15"
+    },
+    {
+      "id": "green",
+      "name": "Terra",
+      "color": "#2ecc71",
+      "colorCode": "§a",
+      "description": "Defesa, mineração e controle de terreno.",
+      "nativeAbility": "Visão Noturna + Imunidade a Mobs Comuns",
+      "abilities": [
+        "Visão noturna (permanente)",
+        "Imunidade a mobs comuns (não chefes)",
+        "Guerreiro: 40% redução de dano + Pele de Rocha (reflete dano)",
+        "Guerreiro: Raízes da Terra (enraiza inimigos)",
+        "Guerreiro: Meditação (cura 1 coração por segundo parado)",
+        "Construtor: Haste III nas profundezas + Colheita Farta (10% dobro)",
+        "Construtor: Geólogo (encontra diamantes em pedra)",
+        "Lord: Aura de Resistência I + Absorção I para aliados"
+      ],
+      "members": [],
+      "totalMembers": 0,
+      "leader": "Nenhum",
+      "founded": "2026-01-15"
+    },
+    {
+      "id": "yellow",
+      "name": "Vento",
+      "color": "#f1c40f",
+      "colorCode": "§e",
+      "description": "Velocidade, mobilidade e impacto tático.",
+      "nativeAbility": "Imunidade a Queda + Velocidade I",
+      "abilities": [
+        "Imunidade a dano de queda (permanente)",
+        "Velocidade I nativa (permanente)",
+        "Guerreiro: Velocidade II + Salto II + Esquiva Fantasma (15% desvio)",
+        "Guerreiro: Rajada de Vento (empurra inimigos para o ar)",
+        "Construtor: Haste III + Alcance do Vento (+3 blocos)",
+        "Construtor: Construção rápida e eficiente",
+        "Lord: Aura de Resistência II + Velocidade II para aliados"
+      ],
+      "members": [],
+      "totalMembers": 0,
+      "leader": "Nenhum",
+      "founded": "2026-01-15"
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>CraftWar — Como entrar</title>
+  <meta name="description" content="CraftWar — IP e Porta, passo a passo para jogar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./_css/styles.css" />
+</head>
+<body>
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html" aria-label="CraftWar">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">CraftWar</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação">
+        <a class="nav__link" href="./index.html">Início</a>
+        <a class="nav__link" href="./nacoes.html">Nações</a>
+        <a class="nav__link" href="./classes.html">Classes</a>
+        <a class="nav__link" href="./eventos.html">Eventos</a>
+        <a class="nav__link" href="./como-entrar.html">Como entrar</a>
+      </nav>
+
+      <button class="menuBtn" type="button" id="menuBtn" aria-label="Abrir menu" aria-haspopup="dialog" aria-controls="drawer" aria-expanded="false">☰</button>
+
+      <div class="header__cta">
+        <a class="btn btn--ghost" href="./como-entrar.html">IP e Porta</a>
+        <a class="btn btn--primary" href="./como-entrar.html">Jogar agora</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__backdrop" id="drawerBackdrop"></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="drawer__head">
+        <div class="drawer__title">CraftWar</div>
+        <button class="drawer__close" type="button" id="drawerClose" aria-label="Fechar menu">✕</button>
+      </div>
+      <nav class="drawer__nav" aria-label="Navegação mobile">
+        <a class="drawer__link" href="./index.html">Início</a>
+        <a class="drawer__link" href="./nacoes.html">Nações</a>
+        <a class="drawer__link" href="./classes.html">Classes</a>
+        <a class="drawer__link" href="./eventos.html">Eventos</a>
+        <a class="drawer__link" href="./como-entrar.html">Como entrar</a>
+      </nav>
+      <div class="drawer__cta">
+        <a class="btn btn--primary btn--wide" href="./como-entrar.html">Jogar agora</a>
+        <a class="btn btn--ghost btn--wide" href="./como-entrar.html">IP e Porta</a>
+      </div>
+    </aside>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Como entrar</h2>
+          <p>Em poucos passos você já está em uma nação e pronto pra guerra.</p>
+        </div>
+
+        <div class="card" style="margin-bottom:14px">
+          <div class="card__top">
+            <div>
+              <p class="card__eyebrow">Endereço do servidor</p>
+              <p class="card__title">IP e Porta</p>
+            </div>
+            <span class="pill">Bedrock</span>
+          </div>
+
+          <div class="card__mid">
+            <div class="info">
+              <p class="info__k">IP</p>
+              <p class="info__v" id="ipText">regarding-logical.gl.at.ply.gg</p>
+            </div>
+            <div class="info">
+              <p class="info__k">Porta</p>
+              <p class="info__v" id="portText">7621</p>
+            </div>
+            <div class="info">
+              <p class="info__k">Versão</p>
+              <p class="info__v">1.26+</p>
+            </div>
+          </div>
+
+          <div class="card__actions">
+            <div class="btnRow">
+              <button class="btn btn--primary" type="button" id="copyIpBtn">Copiar IP</button>
+              <button class="btn btn--primary" type="button" id="copyPortBtn">Copiar Porta</button>
+            </div>
+          </div>
+
+          <p class="card__hint" id="copyHint">Dica: no celular/console, use “Adicionar servidor”.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__n">1</div>
+            <div>
+              <h3>Abra o Minecraft Bedrock</h3>
+              <p>Vá em <strong>Servidores</strong> e clique em <strong>Adicionar servidor</strong>.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__n">2</div>
+            <div>
+              <h3>Preencha os dados</h3>
+              <p><strong>IP:</strong> <span class="mono">regarding-logical.gl.at.ply.gg</span> | <strong>Porta:</strong> <span class="mono">7621</span></p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__n">3</div>
+            <div>
+              <h3>Escolha sua Nação</h3>
+              <p>Entre, selecione sua nação e comece a jogar: monte seu kit, faça sua base e participe dos eventos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Tem whitelist?</summary>
+            <p>Não. O servidor é aberto. (Se você quiser mudar isso, edite aqui.)</p>
+          </details>
+          <details>
+            <summary>Tem Discord?</summary>
+            <p>Coloque aqui o link do Discord do servidor.</p>
+          </details>
+          <details>
+            <summary>Regras básicas</summary>
+            <p>Sem trapaças, sem hacks, respeite jogadores. Punições variam conforme gravidade.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> CraftWar. Todos os direitos reservados.</p>
+      <div class="footer__links">
+        <a href="./index.html">Início</a>
+        <a href="#topo">Topo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const drawer = document.getElementById('drawer');
+      const btn = document.getElementById('menuBtn');
+      const closeBtn = document.getElementById('drawerClose');
+      const backdrop = document.getElementById('drawerBackdrop');
+
+      function openDrawer() {
+        drawer.classList.add('isOpen');
+        drawer.setAttribute('aria-hidden', 'false');
+        btn?.setAttribute('aria-expanded', 'true');
+      }
+
+      function closeDrawer() {
+        drawer.classList.remove('isOpen');
+        drawer.setAttribute('aria-hidden', 'true');
+        btn?.setAttribute('aria-expanded', 'false');
+      }
+
+      btn?.addEventListener('click', openDrawer);
+      closeBtn?.addEventListener('click', closeDrawer);
+      backdrop?.addEventListener('click', closeDrawer);
+      drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeDrawer();
+      });
+    })();
+
+    document.getElementById('year').textContent = String(new Date().getFullYear());
+
+    const IP = 'regarding-logical.gl.at.ply.gg';
+    const PORT = '7621';
+
+    const copyIpBtn = document.getElementById('copyIpBtn');
+    const copyPortBtn = document.getElementById('copyPortBtn');
+    const copyHint = document.getElementById('copyHint');
+
+    async function copyText(value, okMsg, fallbackMsg) {
+      try {
+        await navigator.clipboard.writeText(value);
+        copyHint.textContent = okMsg;
+      } catch {
+        copyHint.textContent = fallbackMsg;
+      }
+    }
+
+    if (copyIpBtn) {
+      copyIpBtn.addEventListener('click', async () => {
+        await copyText(IP, 'IP copiado! Agora cole no campo IP.', `Não consegui copiar automaticamente. Copie manualmente: ${IP}`);
+      });
+    }
+
+    if (copyPortBtn) {
+      copyPortBtn.addEventListener('click', async () => {
+        await copyText(PORT, 'Porta copiada! Agora cole no campo Porta.', `Não consegui copiar automaticamente. Copie manualmente: ${PORT}`);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>CraftWar — Classes</title>
+  <meta name="description" content="CraftWar — Classes: Guerreiro, Construtor e Lord." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./_css/styles.css" />
+</head>
+<body>
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html" aria-label="CraftWar">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">CraftWar</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação">
+        <a class="nav__link" href="./index.html">Início</a>
+        <a class="nav__link" href="./nacoes.html">Nações</a>
+        <a class="nav__link" href="./classes.html">Classes</a>
+        <a class="nav__link" href="./eventos.html">Eventos</a>
+        <a class="nav__link" href="./como-entrar.html">Como entrar</a>
+      </nav>
+
+      <button class="menuBtn" type="button" id="menuBtn" aria-label="Abrir menu" aria-haspopup="dialog" aria-controls="drawer" aria-expanded="false">☰</button>
+
+      <div class="header__cta">
+        <a class="btn btn--ghost" href="./como-entrar.html">IP e Porta</a>
+        <a class="btn btn--primary" href="./como-entrar.html">Jogar agora</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__backdrop" id="drawerBackdrop"></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="drawer__head">
+        <div class="drawer__title">CraftWar</div>
+        <button class="drawer__close" type="button" id="drawerClose" aria-label="Fechar menu">✕</button>
+      </div>
+      <nav class="drawer__nav" aria-label="Navegação mobile">
+        <a class="drawer__link" href="./index.html">Início</a>
+        <a class="drawer__link" href="./nacoes.html">Nações</a>
+        <a class="drawer__link" href="./classes.html">Classes</a>
+        <a class="drawer__link" href="./eventos.html">Eventos</a>
+        <a class="drawer__link" href="./como-entrar.html">Como entrar</a>
+      </nav>
+      <div class="drawer__cta">
+        <a class="btn btn--primary btn--wide" href="./como-entrar.html">Jogar agora</a>
+        <a class="btn btn--ghost btn--wide" href="./como-entrar.html">IP e Porta</a>
+      </div>
+    </aside>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Classes</h2>
+          <p>Defina seu papel na guerra. Evolua em equipe e domine o mapa.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="classCard">
+            <h3>Guerreiro</h3>
+            <p>Frontline de PvP. Pressiona, abre espaço e protege aliados.</p>
+            <div class="tagRow">
+              <span class="tag">Dano</span>
+              <span class="tag">Controle</span>
+            </div>
+          </article>
+          <article class="classCard">
+            <h3>Construtor</h3>
+            <p>Fortifica base, prepara defesas e acelera farm/mineração.</p>
+            <div class="tagRow">
+              <span class="tag">Base</span>
+              <span class="tag">Economia</span>
+            </div>
+          </article>
+          <article class="classCard">
+            <h3>Lord</h3>
+            <p>Liderança e aura de time. Coordena ataques e defesas.</p>
+            <div class="tagRow">
+              <span class="tag">Buff</span>
+              <span class="tag">Líder</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="callout" style="margin-top:22px">
+          <div>
+            <h3>Dica</h3>
+            <p>Entre no servidor, escolha sua nação e comece como classe base. Depois evolua jogando, defendendo território e participando de eventos.</p>
+          </div>
+          <a class="btn btn--primary" href="./eventos.html">Ver eventos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> CraftWar. Todos os direitos reservados.</p>
+      <div class="footer__links">
+        <a href="./index.html">Início</a>
+        <a href="#topo">Topo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const drawer = document.getElementById('drawer');
+      const btn = document.getElementById('menuBtn');
+      const closeBtn = document.getElementById('drawerClose');
+      const backdrop = document.getElementById('drawerBackdrop');
+
+      function openDrawer() {
+        drawer.classList.add('isOpen');
+        drawer.setAttribute('aria-hidden', 'false');
+        btn?.setAttribute('aria-expanded', 'true');
+      }
+
+      function closeDrawer() {
+        drawer.classList.remove('isOpen');
+        drawer.setAttribute('aria-hidden', 'true');
+        btn?.setAttribute('aria-expanded', 'false');
+      }
+
+      btn?.addEventListener('click', openDrawer);
+      closeBtn?.addEventListener('click', closeDrawer);
+      backdrop?.addEventListener('click', closeDrawer);
+      drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeDrawer();
+      });
+    })();
+
+    document.getElementById('year').textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
