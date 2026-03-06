@@ -66,7 +66,7 @@
           <p class="hero__subtitle">Escolha uma das 4 nações e <strong>lute por honra e glória</strong>. Economia com Dracos, lojas, bases com proteção e eventos constantes.</p>
 
           <div class="hero__buttons">
-            <a class="btn btn--primary" href="./como-entrar.html">Copiar IP/Porta</a>
+            <a class="btn btn--primary" href="./como-entrar.html">Jogar agora</a>
             <a class="btn btn--ghost" href="./nacoes.html">Ver nações</a>
           </div>
 
@@ -83,43 +83,6 @@
               <div class="stat__num">Dracos</div>
               <div class="stat__label">Economia própria</div>
             </div>
-          </div>
-        </div>
-
-        <div class="hero__card" aria-label="Cartão de informações">
-          <div class="card">
-            <div class="card__top">
-              <div>
-                <p class="card__eyebrow">Status</p>
-                <p class="card__title">Online</p>
-              </div>
-              <span class="pill">Bedrock</span>
-            </div>
-
-            <div class="card__mid">
-              <div class="info">
-                <p class="info__k">IP</p>
-                <p class="info__v" id="ipText">COLOQUE_AQUI_O_IP</p>
-              </div>
-              <div class="info">
-                <p class="info__k">Porta</p>
-                <p class="info__v" id="portText">19132</p>
-              </div>
-              <div class="info">
-                <p class="info__k">Versão</p>
-                <p class="info__v">1.26+</p>
-              </div>
-            </div>
-
-            <div class="card__actions">
-              <div class="btnRow">
-                <button class="btn btn--primary" type="button" id="copyIpBtn">Copiar IP</button>
-                <button class="btn btn--primary" type="button" id="copyPortBtn">Copiar Porta</button>
-              </div>
-              <a class="btn btn--ghost btn--wide" href="#como-entrar">Como entrar</a>
-            </div>
-
-            <p class="card__hint" id="copyHint">Dica: no celular/console, use “Adicionar servidor”.</p>
           </div>
         </div>
       </div>
@@ -221,39 +184,10 @@
 
     document.getElementById('year').textContent = String(new Date().getFullYear());
 
-    for (const id of ['ipText','ipText2']) {
-      const el = document.getElementById(id);
-      if (el) el.textContent = IP;
-    }
-    for (const id of ['portText','portText2']) {
-      const el = document.getElementById(id);
-      if (el) el.textContent = PORT;
-    }
-
-    const copyIpBtn = document.getElementById('copyIpBtn');
-    const copyPortBtn = document.getElementById('copyPortBtn');
-    const copyHint = document.getElementById('copyHint');
-
-    async function copyText(value, okMsg, fallbackMsg) {
-      try {
-        await navigator.clipboard.writeText(value);
-        copyHint.textContent = okMsg;
-      } catch {
-        copyHint.textContent = fallbackMsg;
-      }
-    }
-
-    if (copyIpBtn) {
-      copyIpBtn.addEventListener('click', async () => {
-        await copyText(IP, 'IP copiado! Agora cole no campo IP.', `Não consegui copiar automaticamente. Copie manualmente: ${IP}`);
-      });
-    }
-
-    if (copyPortBtn) {
-      copyPortBtn.addEventListener('click', async () => {
-        await copyText(PORT, 'Porta copiada! Agora cole no campo Porta.', `Não consegui copiar automaticamente. Copie manualmente: ${PORT}`);
-      });
-    }
+    const ipText = document.getElementById('ipText');
+    const portText = document.getElementById('portText');
+    if (ipText) ipText.textContent = IP;
+    if (portText) portText.textContent = PORT;
   </script>
 </body>
 </html>
