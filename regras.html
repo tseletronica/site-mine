@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>CraftWar — Regras</title>
+  <meta name="description" content="CraftWar — Regras do servidor: Nações, Classes, Construção e PvP." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./_css/styles.css" />
+  <style>
+    @media (max-width: 768px) {
+      .rules-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+    
+    .rule-section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border-left: 4px solid #3498db;
+    }
+    
+    .rule-section h3 {
+      color: #3498db;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+    
+    .rule-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    
+    .permission-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+    
+    .permission-table th,
+    .permission-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .permission-table th {
+      background: rgba(52, 152, 219, 0.1);
+      color: #3498db;
+      font-weight: 600;
+    }
+    
+    .permission-table .yes {
+      color: #2ecc71;
+      font-weight: 600;
+    }
+    
+    .permission-table .no {
+      color: #e74c3c;
+      font-weight: 600;
+    }
+    
+    .permission-table .partial {
+      color: #f39c12;
+      font-weight: 600;
+    }
+    
+    .alert-box {
+      background: rgba(231, 76, 60, 0.1);
+      border: 1px solid rgba(231, 76, 60, 0.3);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+    
+    .alert-box.warning {
+      background: rgba(241, 196, 15, 0.1);
+      border-color: rgba(241, 196, 15, 0.3);
+    }
+    
+    .alert-box.info {
+      background: rgba(52, 152, 219, 0.1);
+      border-color: rgba(52, 152, 219, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html" aria-label="CraftWar">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">CraftWar</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação">
+        <a class="nav__link" href="./index.html">Início</a>
+        <a class="nav__link" href="./nacoes.html">Nações</a>
+        <a class="nav__link" href="./classes.html">Classes</a>
+        <a class="nav__link" href="./regras.html">Regras</a>
+        <a class="nav__link" href="./eventos.html">Eventos</a>
+        <a class="nav__link" href="./comandos.html">Comandos</a>
+        <a class="nav__link" href="./como-entrar.html">Como entrar</a>
+      </nav>
+
+      <button class="menuBtn" type="button" id="menuBtn" aria-label="Abrir menu" aria-haspopup="dialog"
+        aria-controls="drawer" aria-expanded="false">☰</button>
+
+      <div class="header__cta">
+        <a class="btn btn--ghost" href="./como-entrar.html">IP e Porta</a>
+        <a class="btn btn--primary" href="./como-entrar.html">Jogar agora</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__backdrop" id="drawerBackdrop"></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="drawer__head">
+        <div class="drawer__title">CraftWar</div>
+        <button class="drawer__close" type="button" id="drawerClose" aria-label="Fechar menu">✕</button>
+      </div>
+      <nav class="drawer__nav" aria-label="Navegação mobile">
+        <a class="drawer__link" href="./index.html">Início</a>
+        <a class="drawer__link" href="./nacoes.html">Nações</a>
+        <a class="drawer__link" href="./classes.html">Classes</a>
+        <a class="drawer__link" href="./regras.html">Regras</a>
+        <a class="drawer__link" href="./eventos.html">Eventos</a>
+        <a class="drawer__link" href="./comandos.html">Comandos</a>
+        <a class="drawer__link" href="./como-entrar.html">Como entrar</a>
+      </nav>
+      <div class="drawer__cta">
+        <a class="btn btn--primary btn--wide" href="./como-entrar.html">Jogar agora</a>
+        <a class="btn btn--ghost btn--wide" href="./como-entrar.html">IP e Porta</a>
+      </div>
+    </aside>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Regras do Servidor</h2>
+          <p>Conheça as regras de nações, classes, construção e PvP do CraftWar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGRAS GERAIS -->
+    <section class="section">
+      <div class="container">
+        <div class="rule-section">
+          <h3>📋 Regras Gerais</h3>
+          <div class="rule-grid">
+            <div>
+              <h4>🏰 Sistema de Nações</h4>
+              <ul>
+                <li>4 nações: Água, Fogo, Terra e Vento</li>
+                <li>Cada nação tem 2 habilidades nativas</li>
+                <li>Proteção total contra invasores</li>
+                <li>Totem mantém a proteção ativa</li>
+              </ul>
+            </div>
+            <div>
+              <h4>⚔️ Sistema de Classes</h4>
+              <ul>
+                <li><strong>Nativo:</strong> Apenas habilidades nativas</li>
+                <li><strong>Guerreiro:</strong> 3 habilidades de combate + nativas</li>
+                <li><strong>Construtor:</strong> 3 habilidades de construção + nativas</li>
+                <li><strong>Lord/Rei:</strong> Títulos com permissões especiais</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGRAS DE CONSTRUÇÃO -->
+    <section class="section">
+      <div class="container">
+        <div class="rule-section">
+          <h3>🔨 Regras de Construção</h3>
+          
+          <div class="alert-box info">
+            <strong>📍 Áreas Protegidas:</strong> Base = Nação = Área do Totem (50 blocos de raio)
+          </div>
+
+          <table class="permission-table">
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Construção na Base</th>
+                <th>Construção Global</th>
+                <th>Fora da Base</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Guerreiro</strong></td>
+                <td class="no">❌ Não pode</td>
+                <td class="no">❌ Não pode</td>
+                <td class="yes">✅ Vanilha</td>
+              </tr>
+              <tr>
+                <td><strong>Construtor</strong></td>
+                <td class="yes">✅ Pode</td>
+                <td class="no">❌ Não pode</td>
+                <td class="yes">✅ Vanilha</td>
+              </tr>
+              <tr>
+                <td><strong>Lord</strong></td>
+                <td class="yes">✅ Pode</td>
+                <td class="no">❌ Não pode</td>
+                <td class="yes">✅ Vanilha</td>
+              </tr>
+              <tr>
+                <td><strong>Rei</strong></td>
+                <td class="yes">✅ Pode</td>
+                <td class="yes">✅ Global</td>
+                <td class="yes">✅ Vanilha</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="alert-box warning">
+            <strong>⚠️ Importante:</strong> Jogadores de outras nações NUNCA podem construir em bases alheias, mesmo com totem desativado.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGRAS DE PvP -->
+    <section class="section">
+      <div class="container">
+        <div class="rule-section">
+          <h3>⚔️ Regras de PvP</h3>
+          
+          <div class="rule-grid">
+            <div>
+              <h4>🛡️ Construtores em Bases</h4>
+              <ul>
+                <li><strong>0% dano PvP</strong> (dão e recebem)</li>
+                <li>Proteção total contra jogadores</li>
+                <li>Válido apenas dentro da própria base</li>
+                <li>Fora da base = PvP normal</li>
+              </ul>
+            </div>
+            <div>
+              <h4>⚔️ Guerreiros</h4>
+              <ul>
+                <li>PvP normal em todas as áreas</li>
+                <li>100% dano em bases</li>
+                <li>100% dano fora de bases</li>
+                <li>Sem proteções especiais</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="alert-box info">
+            <strong>📍 Áreas de PvP:</strong> As regras de PvP para construtores aplicam-se DENTRO da área do totem (50 blocos de raio).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGRAS DE TÍTULOS -->
+    <section class="section">
+      <div class="container">
+        <div class="rule-section">
+          <h3>👑 Sistema de Títulos (Lord/Rei)</h3>
+          
+          <div class="rule-grid">
+            <div>
+              <h4>🎯 Progressão de Títulos</h4>
+              <ul>
+                <li><strong>Apenas Guerreiros</strong> podem virar Lord</li>
+                <li><strong>Apenas Lords</strong> podem virar Reis</li>
+                <li><strong>Nunca perdem a classe</strong> original</li>
+                <li>Formato: "Guerreiro-Lord-Rei"</li>
+              </ul>
+            </div>
+            <div>
+              <h4>🏰 Permissões por Título</h4>
+              <ul>
+                <li><strong>Lord:</strong> Gerencia economia da nação</li>
+                <li><strong>Lord:</strong> Pode construir na nação</li>
+                <li><strong>Rei:</strong> Gerencia o reino inteiro</li>
+                <li><strong>Rei:</strong> Pode construir globalmente</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="alert-box warning">
+            <strong>⚠️ Perda de Títulos:</strong> Títulos podem ser perdidos através de mecânicas do jogo, voltando para a classe pura.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGRAS DE PROTEÇÃO -->
+    <section class="section">
+      <div class="container">
+        <div class="rule-section">
+          <h3>🛡️ Sistema de Proteção</h3>
+          
+          <div class="rule-grid">
+            <div>
+              <h4>🏰 Proteção do Totem</h4>
+              <ul>
+                <li>Proteção contra explosões</li>
+                <li>Proteção contra jogadores inimigos</li>
+                <li>Proteção de baus e animais</li>
+                <li>Proteção de blocos e itens</li>
+              </ul>
+            </div>
+            <div>
+              <h4>⚠️ Vulnerabilidade</h4>
+              <ul>
+                <li>Totem sem manutenção = Base vulnerável</li>
+                <li>Invasores podem interagir parcialmente</li>
+                <li>Avisos visuais de vulnerabilidade</li>
+                <li>Manutenção necessária regularmente</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="alert-box info">
+            <strong>🔧 Manutenção:</strong> O sistema de manutenção automática cuida da validade dos totems. Mantenha-os ativos para proteção total!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGRAS DE HABILIDADES -->
+    <section class="section">
+      <div class="container">
+        <div class="rule-section">
+          <h3>✨ Sistema de Habilidades</h3>
+          
+          <div class="rule-grid">
+            <div>
+              <h4>🌿 Habilidades Nativas (Todas as Nações)</h4>
+              <ul>
+                <li><strong>Água:</strong> Imunidade a afogamento + Visão noturna</li>
+                <li><strong>Fogo:</strong> Imunidade a fogo/lava + Resistência Nether</li>
+                <li><strong>Terra:</strong> Imunidade a mobs + Visão noturna</li>
+                <li><strong>Vento:</strong> Imunidade a queda + Velocidade I</li>
+              </ul>
+            </div>
+            <div>
+              <h4>⚔️ Habilidades de Classe</h4>
+              <ul>
+                <li><strong>Guerreiros:</strong> 3 habilidades de combate</li>
+                <li><strong>Construtores:</strong> 3 habilidades de construção</li>
+                <li><strong>Balanceadas:</strong> Sem sobreposição</li>
+                <li><strong>Equilíbrio:</strong> Todas as nações com 3 habilidades</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="alert-box warning">
+            <strong>⚠️ Auras de Lord:</strong> Temporariamente removidas para reavaliação. Lords mantêm permissões mas sem auras passivas.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUMO DAS REGRAS -->
+    <section class="section">
+      <div class="container">
+        <div class="rule-section">
+          <h3>📊 Tabela Resumo</h3>
+          
+          <table class="permission-table">
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Habilidades</th>
+                <th>Construção Base</th>
+                <th>Construção Global</th>
+                <th>PvP na Base</th>
+                <th>Fora da Base</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Guerreiro</strong></td>
+                <td>3 + 2 nativas</td>
+                <td class="no">❌</td>
+                <td class="no">❌</td>
+                <td class="yes">100%</td>
+                <td class="yes">Vanilha</td>
+              </tr>
+              <tr>
+                <td><strong>Construtor</strong></td>
+                <td>3 + 2 nativas</td>
+                <td class="yes">✅</td>
+                <td class="no">❌</td>
+                <td class="no">0%</td>
+                <td class="yes">Vanilha</td>
+              </tr>
+              <tr>
+                <td><strong>Guerreiro-Lord</strong></td>
+                <td>3 + 2 nativas</td>
+                <td class="yes">✅</td>
+                <td class="no">❌</td>
+                <td class="yes">100%</td>
+                <td class="yes">Vanilha</td>
+              </tr>
+              <tr>
+                <td><strong>Guerreiro-Lord-Rei</strong></td>
+                <td>3 + 2 nativas</td>
+                <td class="yes">✅</td>
+                <td class="yes">✅</td>
+                <td class="yes">100%</td>
+                <td class="yes">Vanilha</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- DÚVIDAS FREQUENTES -->
+    <section class="section">
+      <div class="container">
+        <div class="rule-section">
+          <h3>❓ Dúvidas Frequentes</h3>
+          
+          <div class="rule-grid">
+            <div>
+              <h4>🤔 Posso mudar de nação?</h4>
+              <p>Não. Uma vez escolhida, a nação é permanente para manter o equilíbrio do servidor.</p>
+            </div>
+            <div>
+              <h4>🔧 Construtores podem lutar?</h4>
+              <p>Sim, mas não causam nem recebem dano PvP dentro da base. Fora da base, PvP é normal.</p>
+            </div>
+            <div>
+              <h4>👑 Como virar Lord?</h4>
+              <p>Apenas guerreiros podem ser promovidos a Lord através dos comandos dos administradores.</p>
+            </div>
+            <div>
+              <h4>🏰 O que acontece se o totem quebrar?</h4>
+              <td>A base fica vulnerável. O sistema automaticamente respawna totens, mas sem manutenção perde proteção.</td>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__col">
+          <h3>CraftWar</h3>
+          <p>Servidor de Minecraft com sistema de nações, classes e conquistas.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./nacoes.html">Nações</a></li>
+            <li><a href="./regras.html">Regras</a></li>
+            <li><a href="./como-entrar.html">Como entrar</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Comunidade</h4>
+          <ul>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 CraftWar. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./_js/main.js"></script>
+</body>
+
+</html>
