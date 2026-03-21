@@ -5,25 +5,20 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0b1020" />
   <title>CraftWar — Nações</title>
-  <meta name="description" content="CraftWar — Nações: Água, Fogo, Terra e Vento." />
+  <meta name="description" content="CraftWar — 5 Nações: Água, Fogo, Terra, Vento e Sombras." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./_css/styles.css" />
   <style>
     @media (max-width: 768px) {
-      .nation-section-flex {
-        flex-direction: column !important;
-        align-items: center !important;
-      }
-      .nation-section-flex img {
-        width: 150px !important;
-        height: 150px !important;
-      }
-      .nation-classes-flex {
-        flex-direction: column !important;
-      }
+      .nation-classes-flex { flex-direction: column !important; align-items: center !important; }
+      .nation-classes-flex img { width: 150px !important; height: 150px !important; }
     }
+    .perk-list { margin: 0; padding-left: 20px; font-size: 0.95em; }
+    .perk-list li { margin-bottom: 6px; }
+    .native-box { padding: 16px; border-radius: 8px; border-left: 4px solid; margin-bottom: 24px; }
+    .class-card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-top: 3px solid; flex: 1; }
   </style>
 </head>
 <body>
@@ -33,17 +28,16 @@
         <span class="brand__mark" aria-hidden="true"></span>
         <span class="brand__text">CraftWar</span>
       </a>
-
       <nav class="nav" aria-label="Navegação">
         <a class="nav__link" href="./index.html">Início</a>
         <a class="nav__link" href="./nacoes.html">Nações</a>
         <a class="nav__link" href="./classes.html">Classes</a>
+        <a class="nav__link" href="./regras.html">Regras</a>
         <a class="nav__link" href="./eventos.html">Eventos</a>
+        <a class="nav__link" href="./comandos.html">Comandos</a>
         <a class="nav__link" href="./como-entrar.html">Como entrar</a>
       </nav>
-
       <button class="menuBtn" type="button" id="menuBtn" aria-label="Abrir menu" aria-haspopup="dialog" aria-controls="drawer" aria-expanded="false">☰</button>
-
       <div class="header__cta">
         <a class="btn btn--ghost" href="./como-entrar.html">IP e Porta</a>
         <a class="btn btn--primary" href="./como-entrar.html">Jogar agora</a>
@@ -62,7 +56,9 @@
         <a class="drawer__link" href="./index.html">Início</a>
         <a class="drawer__link" href="./nacoes.html">Nações</a>
         <a class="drawer__link" href="./classes.html">Classes</a>
+        <a class="drawer__link" href="./regras.html">Regras</a>
         <a class="drawer__link" href="./eventos.html">Eventos</a>
+        <a class="drawer__link" href="./comandos.html">Comandos</a>
         <a class="drawer__link" href="./como-entrar.html">Como entrar</a>
       </nav>
       <div class="drawer__cta">
@@ -77,7 +73,7 @@
       <div class="container">
         <div class="section__head">
           <h2>Nações</h2>
-          <p>Escolha sua nação e lute pelo domínio. Cada uma tem identidade, habilidades e estilo de jogo único.</p>
+          <p>Escolha sua nação e lute pelo domínio. Cada uma tem identidade, imunidades nativas, habilidades e estilo de jogo únicos.</p>
         </div>
       </div>
     </section>
@@ -89,38 +85,37 @@
           <img src="./_img/banner_agua.png" alt="Banner Nação da Água" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px;" loading="lazy" />
         </div>
 
-        <h2 style="color: #3498db; margin-bottom: 8px;">Nação da Água</h2>
-        <p style="font-size: 1.1em; margin-bottom: 24px; color: rgba(255,255,255,0.9);">Controle, mobilidade e sobrevivência aquática.</p>
+        <h2 style="color: #3498db; margin-bottom: 8px;">🌊 Nação da Água</h2>
+        <p style="font-size: 1.1em; margin-bottom: 24px; color: rgba(255,255,255,0.9);">Controle do mar, mobilidade e sobrevivência aquática.</p>
 
-        <!-- Imunidade Nativa -->
-        <div style="background: rgba(52, 152, 219, 0.15); padding: 16px; border-radius: 8px; border-left: 4px solid #3498db; margin-bottom: 24px;">
-          <p style="color: #3498db; font-weight: 600; margin: 0 0 8px 0;">🌊 Imunidade Nativa (Todos)</p>
-          <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95em;">Não morre por afogamento</p>
+        <div class="native-box" style="background: rgba(52, 152, 219, 0.15); border-color: #3498db;">
+          <p style="color: #3498db; font-weight: 600; margin: 0 0 8px 0;">🌊 Imunidade & Poder Nativo (Todos os membros)</p>
+          <ul class="perk-list">
+            <li>Imunidade total a <strong>afogamento</strong></li>
+            <li>Respiração infinita, Visão Noturna e Conduit Power na água</li>
+            <li>Nado ultra-veloz com Dolphin's Grace III</li>
+            <li>100% de resistência a Guardiões, Afogados e Baiacus oceânicos</li>
+          </ul>
         </div>
 
-        <!-- Classes -->
         <div class="nation-classes-flex" style="display: flex; flex-direction: row; gap: 24px;">
-          <!-- Guerreiro -->
-          <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-top: 3px solid #3498db; flex: 1;">
-            <h3 style="color: #3498db; margin-top: 0;">⚔️ Dominador das Profundezas</h3>
-            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Classe: Guerreiro</p>
-            <p style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.9em; margin-bottom: 8px;">Skills</p>
-            <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
-              <li>Conduit Power em Água</li>
-              <li>Velocidade II em Água</li>
-              <li>Arpão 25% (puxa inimigos)</li>
-              <li>Onda de Choque (lentidão)</li>
+          <div class="class-card" style="border-color: #3498db;">
+            <h3 style="color: #3498db; margin-top: 0;">⚔️ Guerreiro — Tritão de Combate</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Arma: Tridente</p>
+            <ul class="perk-list">
+              <li><strong>Tritão de Combate:</strong> Velocidade VI e Conduit Power II na água</li>
+              <li><strong>Domínio Aquático:</strong> Força II constante dentro d'água</li>
+              <li><strong>Arpão (25%):</strong> Chance de puxar inimigos para perto</li>
             </ul>
           </div>
 
-          <!-- Construtor -->
-          <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-top: 3px solid #3498db; flex: 1;">
-            <h3 style="color: #3498db; margin-top: 0;">🔨 Mestre das Marés</h3>
-            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Classe: Construtor</p>
-            <p style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.9em; margin-bottom: 8px;">Skills</p>
-            <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
-              <li>Haste III em Água (4x mais rápido)</li>
-              <li>Coleta Direta (itens no inventário)</li>
+          <div class="class-card" style="border-color: #3498db;">
+            <h3 style="color: #3498db; margin-top: 0;">🔨 Construtor — Mestre das Marés</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Ferramenta: Picareta</p>
+            <ul class="perk-list">
+              <li><strong>Haste Aquática:</strong> Haste IV permanente ao minerar na água</li>
+              <li><strong>Coletor das Marés:</strong> Itens minerados vão direto para o inventário</li>
+              <li><strong>Bênção de Atlântida:</strong> Pode colocar blocos na água sem restrições</li>
             </ul>
           </div>
         </div>
@@ -134,37 +129,37 @@
           <img src="./_img/banner_fogo.png" alt="Banner Nação do Fogo" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px;" loading="lazy" />
         </div>
 
-        <h2 style="color: #e74c3c; margin-bottom: 8px;">Nação do Fogo</h2>
-        <p style="font-size: 1.1em; margin-bottom: 24px; color: rgba(255,255,255,0.9);">Força bruta e resistência. Domine o Nether.</p>
+        <h2 style="color: #e74c3c; margin-bottom: 8px;">🔥 Nação do Fogo</h2>
+        <p style="font-size: 1.1em; margin-bottom: 24px; color: rgba(255,255,255,0.9);">Força bruta e agressividade. Dominam pelo poder e pela destruição.</p>
 
-        <!-- Imunidade Nativa -->
-        <div style="background: rgba(231, 76, 60, 0.15); padding: 16px; border-radius: 8px; border-left: 4px solid #e74c3c; margin-bottom: 24px;">
-          <p style="color: #e74c3c; font-weight: 600; margin: 0 0 8px 0;">🔥 Imunidade Nativa (Todos)</p>
-          <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95em;">Imunidade ao Fogo e Lava</p>
+        <div class="native-box" style="background: rgba(231, 76, 60, 0.15); border-color: #e74c3c;">
+          <p style="color: #e74c3c; font-weight: 600; margin: 0 0 8px 0;">🔥 Imunidade & Poder Nativo (Todos os membros)</p>
+          <ul class="perk-list">
+            <li>Imunidade total a <strong>fogo, lava e magma</strong></li>
+            <li>Resistência a mobs do Nether (Ghast, Blaze — 100%)</li>
+            <li>Velocidade II e Força I no Nether</li>
+          </ul>
         </div>
 
-        <!-- Classes -->
         <div class="nation-classes-flex" style="display: flex; flex-direction: row; gap: 24px;">
-          <!-- Guerreiro -->
-          <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-top: 3px solid #e74c3c; flex: 1;">
-            <h3 style="color: #e74c3c; margin-top: 0;">⚔️ Lâmina de Labareda</h3>
-            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Classe: Guerreiro</p>
-            <p style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.9em; margin-bottom: 8px;">Skills</p>
-            <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
-              <li>Força I (dano aumentado)</li>
-              <li>Incendiar 30% (chance de fogo)</li>
-              <li>Fúria de Magma (mais dano ferido)</li>
+          <div class="class-card" style="border-color: #e74c3c;">
+            <h3 style="color: #e74c3c; margin-top: 0;">⚔️ Guerreiro — Lâmina de Labareda</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Arma: Espada</p>
+            <ul class="perk-list">
+              <li><strong>Força de Combate:</strong> +40% de dano em PvP permanente</li>
+              <li><strong>Incendiar (30%):</strong> Chance de queimar inimigos ao atacar</li>
+              <li><strong>Fúria Berserker:</strong> +10% de dano por coração perdido</li>
+              <li><strong>Último Suspiro (15%):</strong> Explosão critica ao chegar no último meio coração</li>
             </ul>
           </div>
 
-          <!-- Construtor -->
-          <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-top: 3px solid #e74c3c; flex: 1;">
-            <h3 style="color: #e74c3c; margin-top: 0;">🔨 Mestre da Fornalha</h3>
-            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Classe: Construtor</p>
-            <p style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.9em; margin-bottom: 8px;">Skills</p>
-            <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
-              <li>Haste II (minera 2x rápido)</li>
-              <li>Auto-Smelt (minério fundido)</li>
+          <div class="class-card" style="border-color: #e74c3c;">
+            <h3 style="color: #e74c3c; margin-top: 0;">🔨 Construtor — Mestre da Fornalha</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Ferramenta: Picareta</p>
+            <ul class="perk-list">
+              <li><strong>Haste II:</strong> Velocidade de mineração aumentada permanentemente</li>
+              <li><strong>Fornalha Viva:</strong> Funde minérios instantaneamente ao minerar</li>
+              <li><strong>Forno Acelerado:</strong> Eficiência térmica superior (Smelt Speed)</li>
             </ul>
           </div>
         </div>
@@ -178,38 +173,35 @@
           <img src="./_img/banner_terra.png" alt="Banner Nação da Terra" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px;" loading="lazy" />
         </div>
 
-        <h2 style="color: #2ecc71; margin-bottom: 8px;">Nação da Terra</h2>
-        <p style="font-size: 1.1em; margin-bottom: 24px; color: rgba(255,255,255,0.9);">Defesa, mineração e controle de terreno.</p>
+        <h2 style="color: #2ecc71; margin-bottom: 8px;">🌿 Nação da Terra</h2>
+        <p style="font-size: 1.1em; margin-bottom: 24px; color: rgba(255,255,255,0.9);">Defesa inabalável, mineração e controle de terreno.</p>
 
-        <!-- Imunidade Nativa -->
-        <div style="background: rgba(46, 204, 113, 0.15); padding: 16px; border-radius: 8px; border-left: 4px solid #2ecc71; margin-bottom: 24px;">
-          <p style="color: #2ecc71; font-weight: 600; margin: 0 0 8px 0;">🌿 Imunidade Nativa (Todos)</p>
-          <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95em;">Imunidade a mobs hostis comuns</p>
+        <div class="native-box" style="background: rgba(46, 204, 113, 0.15); border-color: #2ecc71;">
+          <p style="color: #2ecc71; font-weight: 600; margin: 0 0 8px 0;">🌿 Imunidade & Poder Nativo (Todos os membros)</p>
+          <ul class="perk-list">
+            <li>Imunidade total a <strong>mobs neutros e hostis comuns</strong> (exceto chefes)</li>
+            <li>Visão Noturna permanente (conexão com a terra)</li>
+          </ul>
         </div>
 
-        <!-- Classes -->
         <div class="nation-classes-flex" style="display: flex; flex-direction: row; gap: 24px;">
-          <!-- Guerreiro -->
-          <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-top: 3px solid #2ecc71; flex: 1;">
-            <h3 style="color: #2ecc71; margin-top: 0;">⚔️ Guardião da Floresta</h3>
-            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Classe: Guerreiro</p>
-            <p style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.9em; margin-bottom: 8px;">Habilidades</p>
-            <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
-              <li>Redução de dano 40%</li>
-              <li>Pele de Rocha (reflete dano)</li>
-              <li>Raízes da Terra (enraiza inimigos)</li>
+          <div class="class-card" style="border-color: #2ecc71;">
+            <h3 style="color: #2ecc71; margin-top: 0;">⚔️ Guerreiro — Guardião da Floresta</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Arma: Martelo</p>
+            <ul class="perk-list">
+              <li><strong>Tanque Terreno:</strong> Redução passiva de 50% de dano em PvP</li>
+              <li><strong>Raízes da Terra (25%):</strong> Prende inimigos no solo com Lentidão IV</li>
+              <li><strong>Meditação:</strong> Recupera 1 coração/s ao ficar completamente parado</li>
             </ul>
           </div>
 
-          <!-- Construtor -->
-          <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-top: 3px solid #2ecc71; flex: 1;">
-            <h3 style="color: #2ecc71; margin-top: 0;">🔨 Geólogo da Terra</h3>
-            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Classe: Construtor</p>
-            <p style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.9em; margin-bottom: 8px;">Habilidades</p>
-            <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
-              <li>Haste III nas profundezas</li>
-              <li>Colheita Farta (10% dobro de recursos)</li>
-              <li>Geólogo (encontra diamantes em pedra)</li>
+          <div class="class-card" style="border-color: #2ecc71;">
+            <h3 style="color: #2ecc71; margin-top: 0;">🔨 Construtor — Geólogo da Terra</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Ferramenta: Picareta</p>
+            <ul class="perk-list">
+              <li><strong>Mestre das Profundezas:</strong> Haste III abaixo da camada 60</li>
+              <li><strong>Colheita Farta:</strong> Chance de duplicar recursos naturais ao colher</li>
+              <li><strong>Geólogo:</strong> Chance de descobrir minérios raros em pedras comuns</li>
             </ul>
           </div>
         </div>
@@ -223,37 +215,108 @@
           <img src="./_img/banner_vento.png" alt="Banner Nação do Vento" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px;" loading="lazy" />
         </div>
 
-        <h2 style="color: #f1c40f; margin-bottom: 8px;">Nação do Vento</h2>
-        <p style="font-size: 1.1em; margin-bottom: 24px; color: rgba(255,255,255,0.9);">Velocidade, mobilidade e impacto tático.</p>
+        <h2 style="color: #f1c40f; margin-bottom: 8px;">💨 Nação do Vento</h2>
+        <p style="font-size: 1.1em; margin-bottom: 24px; color: rgba(255,255,255,0.9);">Velocidade, mobilidade extrema e impacto tático.</p>
 
-        <!-- Imunidade Nativa -->
-        <div style="background: rgba(241, 196, 15, 0.15); padding: 16px; border-radius: 8px; border-left: 4px solid #f1c40f; margin-bottom: 24px;">
-          <p style="color: #f1c40f; font-weight: 600; margin: 0 0 8px 0;">💨 Imunidade Nativa (Todos)</p>
-          <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95em;">Imunidade a dano de queda</p>
+        <div class="native-box" style="background: rgba(241, 196, 15, 0.15); border-color: #f1c40f;">
+          <p style="color: #f1c40f; font-weight: 600; margin: 0 0 8px 0;">💨 Imunidade & Poder Nativo (Todos os membros)</p>
+          <ul class="perk-list">
+            <li>Imunidade total a <strong>dano de queda</strong></li>
+            <li>Velocidade I permanente (Leveza do Ar)</li>
+          </ul>
         </div>
 
-        <!-- Classes -->
         <div class="nation-classes-flex" style="display: flex; flex-direction: row; gap: 24px;">
-          <!-- Guerreiro -->
-          <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-top: 3px solid #f1c40f; flex: 1;">
-            <h3 style="color: #f1c40f; margin-top: 0;">⚔️ Caçador do Céu</h3>
-            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Classe: Guerreiro</p>
-            <p style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.9em; margin-bottom: 8px;">Habilidades</p>
-            <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
-              <li>Velocidade II + Salto II</li>
-              <li>Esquiva Fantasma (15% chance de desvio)</li>
-              <li>Rajada de Vento (empurra inimigos para o ar)</li>
+          <div class="class-card" style="border-color: #f1c40f;">
+            <h3 style="color: #f1c40f; margin-top: 0;">⚔️ Guerreiro — Caçador do Céu</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Arma: Lança</p>
+            <ul class="perk-list">
+              <li><strong>Mobilidade de Elite:</strong> Velocidade II e Salto II em combate</li>
+              <li><strong>Rajada de Vento (35%):</strong> Ataques empurram inimigos com força extrema</li>
+              <li><strong>Esquiva Fantasma (15%):</strong> Chance de anular completamente o dano recebido</li>
             </ul>
           </div>
 
-          <!-- Construtor -->
-          <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-top: 3px solid #f1c40f; flex: 1;">
-            <h3 style="color: #f1c40f; margin-top: 0;">🔨 Engenheiro de Nuvens</h3>
-            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Classe: Construtor</p>
-            <p style="color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.9em; margin-bottom: 8px;">Habilidades</p>
-            <ul style="margin: 0; padding-left: 20px; font-size: 0.95em;">
-              <li>Haste III</li>
-              <li>Alcance do Vento (+3 blocos)</li>
+          <div class="class-card" style="border-color: #f1c40f;">
+            <h3 style="color: #f1c40f; margin-top: 0;">🔨 Construtor — Engenheiro de Nuvens</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Ferramenta: Picareta</p>
+            <ul class="perk-list">
+              <li><strong>Haste III:</strong> Mineração ultra-veloz permanente</li>
+              <li><strong>Alcance do Vento:</strong> Maior alcance para quebrar e colocar blocos</li>
+              <li><strong>Engenheiro de Nuvens:</strong> Voo temporário de 5s ao construir</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAÇÃO DAS SOMBRAS (BLACK) -->
+    <section class="section section--nation" style="background: linear-gradient(135deg, rgba(80, 0, 120, 0.18) 0%, rgba(30, 10, 50, 0.18) 100%); border-top: 1px solid rgba(150,0,255,0.15);">
+      <div class="container">
+        <div style="margin-bottom: 32px;">
+          <img src="./_img/banner_sombras.png" alt="Banner Nação das Sombras" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px;" loading="lazy" onerror="this.style.display='none'" />
+        </div>
+
+        <h2 style="color: #9b59b6; margin-bottom: 8px;">🌑 Nação das Sombras</h2>
+        <p style="font-size: 1.1em; margin-bottom: 8px; color: rgba(255,255,255,0.9);">Furtividade, controle das sombras e ataques-surpresa.</p>
+        <p style="font-size: 0.9em; margin-bottom: 24px; color: rgba(200,150,255,0.8);">⚠️ Nação especial — acesso exclusivo por convite ou compra.</p>
+
+        <div class="native-box" style="background: rgba(155, 89, 182, 0.15); border-color: #9b59b6;">
+          <p style="color: #9b59b6; font-weight: 600; margin: 0 0 8px 0;">🌑 Imunidade & Poder Nativo (Todos os membros)</p>
+          <ul class="perk-list">
+            <li>Imunidade total a <strong>Cegueira</strong> e visão perfeita no escuro</li>
+            <li>Visão Noturna permanente em cavernas e noite</li>
+          </ul>
+        </div>
+
+        <div class="nation-classes-flex" style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 24px;">
+          <div class="class-card" style="border-color: #9b59b6; min-width: 200px;">
+            <h3 style="color: #9b59b6; margin-top: 0;">🗡️ Titã da Noite</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Arma: Martelo Pesado — Tanque</p>
+            <ul class="perk-list">
+              <li><strong>Couraça Abissal:</strong> Resistência III permanente</li>
+              <li><strong>Pele de Rocha (25%):</strong> Regenera vida ao receber golpes</li>
+              <li><strong>Peso de Sombras:</strong> Imunidade total a Knockback</li>
+            </ul>
+          </div>
+
+          <div class="class-card" style="border-color: #9b59b6; min-width: 200px;">
+            <h3 style="color: #9b59b6; margin-top: 0;">🌙 Lâmina Fantasma</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Arma: Adagas de Ébano — Assassino</p>
+            <ul class="perk-list">
+              <li><strong>Mimetismo:</strong> Invisível enquanto agachado</li>
+              <li><strong>Esquiva das Sombras (20%):</strong> Anula dano recebido (CD 12s)</li>
+              <li><strong>Apunhalar:</strong> Dano triplicado ao atacar pelas costas</li>
+            </ul>
+          </div>
+
+          <div class="class-card" style="border-color: #9b59b6; min-width: 200px;">
+            <h3 style="color: #9b59b6; margin-top: 0;">🏹 Rastreador Sombrio</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Arma: Arco do Vazio — Arqueiro</p>
+            <ul class="perk-list">
+              <li><strong>Olhar Cego (30%):</strong> Flechas aplicam cegueira ao alvo</li>
+              <li><strong>Agilidade Sombria:</strong> Velocidade II e Salto II permanentes</li>
+              <li><strong>Tiro Fantasma:</strong> Dano aumentado com base na distância</li>
+            </ul>
+          </div>
+
+          <div class="class-card" style="border-color: #9b59b6; min-width: 200px;">
+            <h3 style="color: #9b59b6; margin-top: 0;">⚔️ Guerreiro das Sombras</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Arma: Lâmina de Ébano</p>
+            <ul class="perk-list">
+              <li><strong>Toque de Wither (20%):</strong> Chance de aplicar Wither ao bater</li>
+              <li><strong>Peso de Sombras:</strong> Resistência II e Imunidade a Knockback</li>
+              <li><strong>Manto da Noite:</strong> Invisível ao agachar</li>
+            </ul>
+          </div>
+
+          <div class="class-card" style="border-color: #9b59b6; min-width: 200px;">
+            <h3 style="color: #9b59b6; margin-top: 0;">⛏️ Construtor Sombrio</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85em; margin-bottom: 12px;">Arma: Picareta de Obsidiana</p>
+            <ul class="perk-list">
+              <li><strong>Mineração Abissal:</strong> Haste III permanente</li>
+              <li><strong>Voz do Abismo:</strong> Chance de encontrar tesouros raros no Deepslate</li>
+              <li><strong>Furtividade Precisa:</strong> Mineração silenciosa e eficiente</li>
             </ul>
           </div>
         </div>
@@ -264,7 +327,7 @@
       <div class="container">
         <div style="background: rgba(255, 193, 7, 0.15); padding: 20px; border-radius: 8px; border-left: 4px solid #ffc107;">
           <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95em;">
-            <strong>⚠️ Aviso:</strong> Todas as nações estão sujeitas a atualizações para balanceamento do jogo. Habilidades podem receber nerfs ou buffs sem aviso prévio.
+            <strong>⚠️ Aviso:</strong> Todas as nações estão sujeitas a atualizações de balanceamento. Habilidades podem receber ajustes sem aviso prévio.
           </p>
         </div>
       </div>
@@ -287,28 +350,14 @@
       const btn = document.getElementById('menuBtn');
       const closeBtn = document.getElementById('drawerClose');
       const backdrop = document.getElementById('drawerBackdrop');
-
-      function openDrawer() {
-        drawer.classList.add('isOpen');
-        drawer.setAttribute('aria-hidden', 'false');
-        btn?.setAttribute('aria-expanded', 'true');
-      }
-
-      function closeDrawer() {
-        drawer.classList.remove('isOpen');
-        drawer.setAttribute('aria-hidden', 'true');
-        btn?.setAttribute('aria-expanded', 'false');
-      }
-
+      function openDrawer() { drawer.classList.add('isOpen'); drawer.setAttribute('aria-hidden', 'false'); btn?.setAttribute('aria-expanded', 'true'); }
+      function closeDrawer() { drawer.classList.remove('isOpen'); drawer.setAttribute('aria-hidden', 'true'); btn?.setAttribute('aria-expanded', 'false'); }
       btn?.addEventListener('click', openDrawer);
       closeBtn?.addEventListener('click', closeDrawer);
       backdrop?.addEventListener('click', closeDrawer);
       drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeDrawer();
-      });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
     })();
-
     document.getElementById('year').textContent = String(new Date().getFullYear());
   </script>
 </body>

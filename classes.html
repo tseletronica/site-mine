@@ -1,18 +1,16 @@
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0b1020" />
   <title>CraftWar — Classes</title>
-  <meta name="description" content="CraftWar — Classes: Guerreiro, Construtor e Lord." />
+  <meta name="description" content="CraftWar — Classes: Guerreiro, Construtor e Lord. Escolha seu papel na guerra." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./_css/styles.css" />
 </head>
-
 <body>
   <header class="header" id="topo">
     <div class="container header__inner">
@@ -20,19 +18,16 @@
         <span class="brand__mark" aria-hidden="true"></span>
         <span class="brand__text">CraftWar</span>
       </a>
-
       <nav class="nav" aria-label="Navegação">
         <a class="nav__link" href="./index.html">Início</a>
         <a class="nav__link" href="./nacoes.html">Nações</a>
         <a class="nav__link" href="./classes.html">Classes</a>
+        <a class="nav__link" href="./regras.html">Regras</a>
         <a class="nav__link" href="./eventos.html">Eventos</a>
         <a class="nav__link" href="./comandos.html">Comandos</a>
         <a class="nav__link" href="./como-entrar.html">Como entrar</a>
       </nav>
-
-      <button class="menuBtn" type="button" id="menuBtn" aria-label="Abrir menu" aria-haspopup="dialog"
-        aria-controls="drawer" aria-expanded="false">☰</button>
-
+      <button class="menuBtn" type="button" id="menuBtn" aria-label="Abrir menu" aria-haspopup="dialog" aria-controls="drawer" aria-expanded="false">☰</button>
       <div class="header__cta">
         <a class="btn btn--ghost" href="./como-entrar.html">IP e Porta</a>
         <a class="btn btn--primary" href="./como-entrar.html">Jogar agora</a>
@@ -51,6 +46,7 @@
         <a class="drawer__link" href="./index.html">Início</a>
         <a class="drawer__link" href="./nacoes.html">Nações</a>
         <a class="drawer__link" href="./classes.html">Classes</a>
+        <a class="drawer__link" href="./regras.html">Regras</a>
         <a class="drawer__link" href="./eventos.html">Eventos</a>
         <a class="drawer__link" href="./comandos.html">Comandos</a>
         <a class="drawer__link" href="./como-entrar.html">Como entrar</a>
@@ -67,22 +63,24 @@
       <div class="container">
         <div class="section__head">
           <h2>Classes</h2>
-          <p>Defina seu papel na guerra. Evolua em equipe e domine o mapa.</p>
+          <p>Defina seu papel na guerra. Cada classe tem habilidades exclusivas que variam por nação. O <strong>Lord</strong> é escolhido pela confiança — ele lidera e administra a nação.</p>
         </div>
 
         <div class="grid3">
+          <!-- GUERREIRO -->
           <article class="classCard">
             <img src="./_img/classe_guerreiro.png" alt="Guerreiro"
               style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 16px;" />
-            <h3>Guerreiro</h3>
-            <p>Frontline de PvP. Cada nação oferece um estilo de combate único.</p>
+            <h3>⚔️ Guerreiro</h3>
+            <p>Frontline de PvP. Especialista em combate corpo-a-corpo. Cada nação tem um estilo único de luta.</p>
             <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; margin-top: 12px; font-size: 0.9em;">
               <p style="margin: 0 0 8px 0; color: rgba(255,255,255,0.7);"><strong>Habilidades por Nação:</strong></p>
               <ul style="margin: 0; padding-left: 20px; font-size: 0.85em; color: rgba(255,255,255,0.8);">
-                <li><strong>Fogo:</strong> Incendiar (30%), Fúria Berserker, +40% dano</li>
-                <li><strong>Vento:</strong> Rajada de Vento, Esquiva (15%), Velocidade II</li>
-                <li><strong>Terra:</strong> Tanque (50% redução), Raízes da Terra, Meditação</li>
-                <li><strong>Água:</strong> Tritão de Combate, Domínio Aquático, Arpão</li>
+                <li><strong>🔥 Fogo:</strong> +40% dano, Incendiar (30%), Fúria Berserker, Último Suspiro</li>
+                <li><strong>💨 Vento:</strong> Velocidade II + Salto II, Rajada (35%), Esquiva Fantasma (15%)</li>
+                <li><strong>🌿 Terra:</strong> Tanque (50% redução), Raízes da Terra (25%), Meditação</li>
+                <li><strong>🌊 Água:</strong> Tritão de Combate, Domínio Aquático, Arpão (25%)</li>
+                <li><strong>🌑 Sombras:</strong> Toque de Wither (20%), Manto da Noite, Peso de Sombras</li>
               </ul>
             </div>
             <div class="tagRow" style="margin-top: 12px;">
@@ -90,18 +88,21 @@
               <span class="tag">Combate</span>
             </div>
           </article>
+
+          <!-- CONSTRUTOR -->
           <article class="classCard">
             <img src="./_img/classe_construtor.png" alt="Construtor"
               style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 16px;" />
-            <h3>Construtor</h3>
-            <p>Especialista em mineração, construção e economia. Acelera farm e defesa.</p>
+            <h3>🔨 Construtor</h3>
+            <p>Especialista em mineração, coleta e economia. Acelera o farm da nação e sustenta a base.</p>
             <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; margin-top: 12px; font-size: 0.9em;">
               <p style="margin: 0 0 8px 0; color: rgba(255,255,255,0.7);"><strong>Habilidades por Nação:</strong></p>
               <ul style="margin: 0; padding-left: 20px; font-size: 0.85em; color: rgba(255,255,255,0.8);">
-                <li><strong>Fogo:</strong> Haste II, Fornalha Viva, Forno Acelerado</li>
-                <li><strong>Vento:</strong> Haste III, Alcance do Vento, Engenheiro de Nuvens</li>
-                <li><strong>Terra:</strong> Mestre das Profundezas, Colheita Farta, Geólogo</li>
-                <li><strong>Água:</strong> Haste Aquática, Coletor das Marés, Bênção de Atlântida</li>
+                <li><strong>🔥 Fogo:</strong> Haste II, Fornalha Viva (smelt automático), Forno Acelerado</li>
+                <li><strong>💨 Vento:</strong> Haste III, Alcance do Vento, Voo temporário ao construir</li>
+                <li><strong>🌿 Terra:</strong> Haste III (camada 60↓), Colheita Farta, Geólogo</li>
+                <li><strong>🌊 Água:</strong> Haste IV na água, Itens direto p/ inventário, Bênção de Atlântida</li>
+                <li><strong>🌑 Sombras:</strong> Haste III, Tesouros no Deepslate, Mineração silenciosa</li>
               </ul>
             </div>
             <div class="tagRow" style="margin-top: 12px;">
@@ -109,14 +110,21 @@
               <span class="tag">Economia</span>
             </div>
           </article>
+
+          <!-- LORD -->
           <article class="classCard">
             <img src="./_img/classe_lord.png" alt="Lord"
               style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 16px;" />
-            <h3>Lord</h3>
-            <p>Liderança e coordenação. Buffs para o time e controle estratégico.</p>
+            <h3>👑 Lord</h3>
+            <p>Líder eleito da nação. Gerencia o cofre, coordena ataques e representa a nação nos eventos.</p>
             <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; margin-top: 12px; font-size: 0.9em;">
-              <p style="margin: 0 0 8px 0; color: rgba(255,255,255,0.7);"><strong>Função:</strong></p>
-              <p style="margin: 0; font-size: 0.85em; color: rgba(255,255,255,0.8);">Coordena ataques, oferece buffs ao time e controla recursos estratégicos. Essencial para vitória em guerra.</p>
+              <p style="margin: 0 0 8px 0; color: rgba(255,255,255,0.7);"><strong>Privilégios exclusivos:</strong></p>
+              <ul style="margin: 0; padding-left: 20px; font-size: 0.85em; color: rgba(255,255,255,0.8);">
+                <li>Acesso ao <strong>cofre da nação</strong> (sacar e depositar Dracos)</li>
+                <li>Participa da <strong>Tomada do Castelo</strong></li>
+                <li>Acesso ao <strong>Painel Web</strong> da nação para gerenciar membros</li>
+                <li>Tag exclusiva de Lord no chat</li>
+              </ul>
             </div>
             <div class="tagRow" style="margin-top: 12px;">
               <span class="tag">Liderança</span>
@@ -125,6 +133,21 @@
           </article>
         </div>
 
+        <!-- SOMBRAS especial -->
+        <div style="margin-top: 40px; background: rgba(155, 89, 182, 0.08); border: 1px solid rgba(155,89,182,0.25); border-radius: 12px; padding: 24px;">
+          <h3 style="color: #9b59b6; margin-top: 0;">🌑 Nação das Sombras — Subclasses Exclusivas</h3>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.9em; margin-bottom: 16px;">A Nação das Sombras possui 5 subclasses únicas com habilidades independentes. Veja a página de Nações para detalhes completos.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; font-size: 0.9em;">
+            <span style="background: rgba(155,89,182,0.2); border: 1px solid rgba(155,89,182,0.4); padding: 6px 14px; border-radius: 20px;">🗡️ Titã da Noite (Tank)</span>
+            <span style="background: rgba(155,89,182,0.2); border: 1px solid rgba(155,89,182,0.4); padding: 6px 14px; border-radius: 20px;">🌙 Lâmina Fantasma (Assassino)</span>
+            <span style="background: rgba(155,89,182,0.2); border: 1px solid rgba(155,89,182,0.4); padding: 6px 14px; border-radius: 20px;">🏹 Rastreador Sombrio (Arqueiro)</span>
+            <span style="background: rgba(155,89,182,0.2); border: 1px solid rgba(155,89,182,0.4); padding: 6px 14px; border-radius: 20px;">⚔️ Guerreiro das Sombras</span>
+            <span style="background: rgba(155,89,182,0.2); border: 1px solid rgba(155,89,182,0.4); padding: 6px 14px; border-radius: 20px;">⛏️ Construtor Sombrio</span>
+          </div>
+          <p style="margin-top: 14px;">
+            <a class="btn btn--ghost" href="./nacoes.html#sombras">Ver Nação das Sombras</a>
+          </p>
+        </div>
 
       </div>
     </section>
@@ -146,30 +169,15 @@
       const btn = document.getElementById('menuBtn');
       const closeBtn = document.getElementById('drawerClose');
       const backdrop = document.getElementById('drawerBackdrop');
-
-      function openDrawer() {
-        drawer.classList.add('isOpen');
-        drawer.setAttribute('aria-hidden', 'false');
-        btn?.setAttribute('aria-expanded', 'true');
-      }
-
-      function closeDrawer() {
-        drawer.classList.remove('isOpen');
-        drawer.setAttribute('aria-hidden', 'true');
-        btn?.setAttribute('aria-expanded', 'false');
-      }
-
+      function openDrawer() { drawer.classList.add('isOpen'); drawer.setAttribute('aria-hidden', 'false'); btn?.setAttribute('aria-expanded', 'true'); }
+      function closeDrawer() { drawer.classList.remove('isOpen'); drawer.setAttribute('aria-hidden', 'true'); btn?.setAttribute('aria-expanded', 'false'); }
       btn?.addEventListener('click', openDrawer);
       closeBtn?.addEventListener('click', closeDrawer);
       backdrop?.addEventListener('click', closeDrawer);
       drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeDrawer();
-      });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
     })();
-
     document.getElementById('year').textContent = String(new Date().getFullYear());
   </script>
 </body>
-
 </html>
